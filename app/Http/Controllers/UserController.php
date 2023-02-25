@@ -37,36 +37,26 @@ class UserController extends Controller
     public function registerCriar(Request $request)
     {
         $register = $request->validate([
-            'email' => 'string|required',
-            'nome'  => 'string|required',
-            'password' => 'string|required',
+            'name'  => 'string|required',
+            'email' => 'email|required',
+            'password' => 'string|required'
         ]);
 
+        $register['password'] = password_hash(strtoupper($register['password']));
+
+        //dd($register);
 
        Usuario::create($register);
 
         return redirect()->route('site.home');;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function cart()
     {
         $products = Product::all();
         return view('site.cart', ['products' => $products]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //

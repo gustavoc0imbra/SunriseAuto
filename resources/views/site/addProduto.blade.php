@@ -11,12 +11,12 @@
                                 <div class="row align-items-center pt-4 pb-3">
                                     <div class="col-md-3 ps-5">
 
-                                        <h6 class="mb-0">Nome do produto</h6>
+                                        <h6 class="mb-0">Product's name</h6>
 
                                     </div>
                                     <div class="col-md-9 pe-5">
 
-                                        <input type="text" class="form-control form-control-lg" id="" name="name" placeholder="Insira o nome do produto"/>
+                                        <input type="text" class="form-control form-control-lg" id="" name="name" placeholder="Write the product's name"/>
 
                                     </div>
                                 </div>
@@ -26,12 +26,12 @@
                                 <div class="row align-items-center py-3">
                                     <div class="col-md-3 ps-5">
 
-                                        <h6 class="mb-0">Preço</h6>
+                                        <h6 class="mb-0">Price</h6>
 
                                     </div>
                                     <div class="col-md-9 pe-5">
 
-                                        <input type="text" name="cnpj" id="" placeholder="Insira o preço do produto" class="form-control form-control-lg"/>
+                                        <input type="text" name="price" id="" placeholder="Write the price of product" class="form-control form-control-lg"/>
 
                                     </div>
                                 </div>
@@ -41,12 +41,12 @@
                                 <div class="row align-items-center py-3">
                                     <div class="col-md-3 ps-5">
 
-                                        <h6 class="mb-0">Descrição</h6>
+                                        <h6 class="mb-0">Description</h6>
 
                                     </div>
                                     <div class="col-md-9 pe-5">
 
-                                        <input class="form-control form-control-lg" type="text" name="endereco" placeholder="Insira uma descrição"/>
+                                        <input class="form-control form-control-lg" type="text" name="description" placeholder="Write a brief description"/>
 
                                     </div>
                                 </div>
@@ -56,13 +56,13 @@
                                 <div class="row align-items-center py-3">
                                     <div class="col-md-3 ps-5">
 
-                                        <h6 class="mb-0">Imagem</h6>
+                                        <h6 class="mb-0">Image</h6>
 
                                     </div>
                                     <div class="col-md-9 pe-5">
 
-                                        <input class="form-control form-control-lg" type="file" name="image" id="image" name='MAX_FILE_SIZE' value='5242880' />
-                                        <div class="small text-muted mt-2">Coloque a imagem do produto
+                                        <input class="form-control form-control-lg" type="file" name="Image" id="image" name='MAX_FILE_SIZE' value='5242880' />
+                                        <div class="small text-muted mt-2">Product's Image
                                         </div>
 
                                     </div>
@@ -71,7 +71,7 @@
                                 <hr class="mx-n3">
 
                                 <div class="px-5 py-4">
-                                    <button type="submit" class="btn btn-primary btn-lg">Cadastrar</button>
+                                    <button type="submit" class="btn btn-primary btn-lg">Save Product</button>
                                 </div>
                             </form>
                         </div>

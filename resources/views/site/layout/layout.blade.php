@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -17,20 +17,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('site.home') }}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Todos os Produtos</a></li>
+                        <li><a class="dropdown-item" href="#!">All products</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Itens mais procurados</a></li>
-                        <li><a class="dropdown-item" href="#!">Produtos novos</a></li>
+                        <li><a class="dropdown-item" href="#!">Most Wanted</a></li>
+                        <li><a class="dropdown-item" href="#!">Just Arrived</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-outline-dark position-absolute top-2 end-5 nav-item" style="margin-right: 8%;" href="{{ route('site.register') }}">
                         <i class="bi bi-person-plus-fill"></i>
-                        Criar Conta
+                        Create Account
                     </a>
                 </li>
                 <li class="nav-item">
@@ -44,8 +44,8 @@
             <form class="d-flex">
                 <a class="btn btn-outline-dark me-5" href="{{ route('site.cart') }}">
                     <i class="bi-cart-fill me-1"></i>
-                    Carrinho
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">5</span>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">1</span>
                 </a>
             </form>
 

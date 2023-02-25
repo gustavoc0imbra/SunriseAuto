@@ -4,7 +4,7 @@
         <div class="container wow fadeIn">
 
             <!-- Heading -->
-            <h2 class="my-5 h2 text-center">Checkout Compras</h2>
+            <h2 class="my-5 h2 text-center">Checkout</h2>
 
             <!--Grid row-->
             <div class="row">
@@ -27,7 +27,7 @@
                                     <!--firstName-->
                                     <div class="md-form ">
                                         <input type="text" id="firstName" class="form-control">
-                                        <label for="firstName" class="">Primeiro Nome</label>
+                                        <label for="firstName" class="">First Name</label>
                                     </div>
 
                                 </div>
@@ -39,7 +39,7 @@
                                     <!--lastName-->
                                     <div class="md-form">
                                         <input type="text" id="lastName" class="form-control">
-                                        <label for="lastName" class="">Último nome</label>
+                                        <label for="lastName" class="">Last Name</label>
                                     </div>
 
                                 </div>
@@ -50,14 +50,14 @@
 
                             <!--email-->
                             <div class="md-form mb-5">
-                                <input type="text" id="email" class="form-control" placeholder="seuemail@example.com">
-                                <label for="email" class="">Seu email (Obrigatório)</label>
+                                <input type="text" id="email" class="form-control" placeholder="youremail@example.com">
+                                <label for="email" class="">Your email (obligatory)</label>
                             </div>
 
                             <!--address-->
                             <div class="md-form mb-5">
-                                <input type="text" id="address" class="form-control" placeholder="Rua Groove St">
-                                <label for="address" class="">Endereço</label>
+                                <input type="text" id="address" class="form-control" placeholder="Saint St">
+                                <label for="address" class="">Address</label>
                             </div>
 
                             <!--Grid row-->
@@ -65,9 +65,9 @@
                                 <!--Grid column-->
                                 <div class="col-lg-4 col-md-6 mb-4">
 
-                                    <label for="state">Estado</label>
+                                    <label for="state">State</label>
                                     <select class="custom-select d-block w-100" id="state" required>
-                                        <option value="">Escolha...</option>
+                                        <option value="">Choose...</option>
                                         <option>SP</option>
                                         <option>RJ</option>
                                         <option>ES</option>
@@ -76,7 +76,7 @@
                                         <option>MG</option>
                                     </select>
                                     <div class="invalid-feedback">
-                                        Por favor selecione um Estado.
+                                        Please select one state.
                                     </div>
 
                                 </div>
@@ -86,9 +86,9 @@
                                 <div class="col-lg-4 col-md-6 mb-4">
 
                                     <label for="zip">Cep</label>
-                                    <input type="text" class="form-control" id="zip" placeholder="Digite seu CEP" required>
+                                    <input type="text" class="form-control" id="zip" placeholder="Write your CEP" required>
                                     <div class="invalid-feedback">
-                                        Por Digite seu CEP.
+                                        Write your CEP
                                     </div>
 
                                 </div>
@@ -102,11 +102,11 @@
                             <div class="d-block my-3">
                                 <div class="custom-control custom-radio">
                                     <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                                    <label class="custom-control-label" for="credit">Cartão de Crédito</label>
+                                    <label class="custom-control-label" for="credit">Credit card</label>
                                 </div>
                                 <div class="custom-control custom-radio">
                                     <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="debit">Cartão de Dévito</label>
+                                    <label class="custom-control-label" for="debit">Debit card</label>
                                 </div>
                                 <div class="custom-control custom-radio">
                                     <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
@@ -114,32 +114,32 @@
                                 </div>
                                 <div class="custom-control custom-radio">
                                     <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                                    <label class="custom-control-label" for="paypal">Boleto Bancário</label>
+                                    <label class="custom-control-label" for="paypal">PayPal</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <label for="cc-name">Nome no cartão</label>
+                                    <label for="cc-name">Card's owner name</label>
                                     <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                                    <small class="text-muted">NOME COMPLETO ESTAMPADO NO CARTÃO</small>
+                                    <small class="text-muted">NUMBER ON THE FRONT OF CARD</small>
                                     <div class="invalid-feedback">
-                                        Nome do cartão é obrigatório
+                                        Name's owner of card is required
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <label for="cc-number">Número do cartão</label>
+                                    <label for="cc-number">Card's number</label>
                                     <input type="text" class="form-control" id="cc-number" placeholder="" required>
                                     <div class="invalid-feedback">
-                                        Número do cartão
+                                        Card's number
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-3 mb-3">
-                                    <label for="cc-expiration">Data de venci.</label>
+                                    <label for="cc-expiration">End date.</label>
                                     <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
                                     <div class="invalid-feedback">
-                                        Data de vencimento necessária
+                                        End date required
                                     </div>
                                 </div>
                                 <div class="col-md-3 mb-3">
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                             <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Continuar compra</button>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue the sale</button>
 
                         </form>
 
@@ -166,7 +166,7 @@
 
                     <!-- Heading -->
                     <h4 class="d-flex justify-content-between align-items-center mb-3">
-                        <span class="text-muted">Seu Carrinho</span>
+                        <span class="text-muted">Your cart</span>
                         <span class="badge badge-secondary badge-pill">3</span>
                     </h4>
 
@@ -177,7 +177,7 @@
                             <div>
                                 <h6 class="my-0">{{ $product->Name }}</h6>
                             </div>
-                            <span class="text-muted">R${{ $product->Price }},00</span>
+                            <span class="text-muted">R$ {{ $product->Price }},00</span>
                         </li>
                         @endforeach
                     </ul>
@@ -186,9 +186,9 @@
                     <!-- Promo code -->
                     <form class="card p-2">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Cupom desconto" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control" placeholder="Coupon discount" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-secondary btn-md waves-effect m-0" type="button">Resgatar</button>
+                                <button class="btn btn-secondary btn-md waves-effect m-0" type="button">Redeem</button>
                             </div>
                         </div>
                     </form>

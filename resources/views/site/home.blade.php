@@ -10,10 +10,10 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{ asset('unoDrift.JPG') }}" class="d-block w-100" style="height: 750px;" alt="...">
+                        <img src="{{ asset('lancer4.png') }}" class="d-block w-100" style="height: 750px;" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h1 >Sunrise Auto</h1>
-                            <h2>A loja onde você encontra todas as peças que precisa</h2>
+                            <h2>The store where you find everything for your car.</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -24,10 +24,10 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('chevette.jpg') }}" class="d-block w-100" alt="..." style="height: 750px;">
+                        <img src="{{ asset('rx7.png') }}" class="d-block w-100" alt="..." style="height: 750px;">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1>Tudo para seu poçante</h1>
-                            <h2>Desde acessórios até upgrades de perfomance (turbinas, coletores).</h2>
+                            <h1>Everything to your car.</h1>
+                            <h2>Even accesories until performance upgrades (turbines, colectors).</h2>
                         </div>
                     </div>
                 </div>

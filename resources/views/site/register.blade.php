@@ -29,37 +29,42 @@
 
                         <form action="{{ route('site.addCliente') }}" method="POST" style="width: 23rem;">
                             @csrf
-                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Cadastre-se</h3>
+                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign-up</h3>
 
                             <div class="form-outline mb-4">
-                                <input name="email" type="email"  class="form-control form-control-lg" required/>
+                                <input name="email" type="email"  class="form-control form-control-lg"/>
                                 <label class="form-label">Email</label>
                                 @error('email')
-                                    <h1>Email inválido</h1>
+                                    <h1>Invalid Email!</h1>
                                 @enderror
                             </div>
 
                             <div class="form-outline mb-4">
-                                <input name="nome" type="text"  class="form-control form-control-lg" required/>
-                                <label class="form-label">Nome</label>
-                                @error('nome')
-                                <h1>Email inválido</h1>
+                                <input name="name" type="text"  class="form-control form-control-lg" required/>
+                                <label class="form-label">Name</label>
+                                @error('name')
+                                <h1>Invalid Password!</h1>
                                 @enderror
                             </div>
 
                             <div class="form-outline mb-4">
-                                <input name="senha" type="password" class="form-control form-control-lg" required/>
-                                <label class="form-label">Senha</label>
-                                @error('senha')
-                                    <h1>Email inválido</h1>
+                                <input name="password" type="password" class="form-control form-control-lg" required/>
+                                <label class="form-label">Password</label>
+                                @error('password')
+                                    <h1>Invalid password!</h1>
                                 @enderror
                             </div>
+
+                            <!--<div class="form-outline mb-4">
+                                <input name="Image" type="file" class="form-control form-control-lg"/>
+
+                            </div>-->
 
                             <div class="pt-1 mb-4">
-                                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Teste">
+                                <input class="btn btn-primary btn-lg btn-block" type="submit" value="Sign Up">
                             </div>
 
-                            <p>Possui uma conta? <a href="{{ route('site.login') }}" class="link-info">Faça login aqui!</a></p>
+                            <p>Already signed? <a href="{{ route('site.login') }}" class="link-info">Login here!</a></p>
 
                         </form>
 
