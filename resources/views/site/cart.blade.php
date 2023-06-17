@@ -50,7 +50,7 @@
 
                             <!--email-->
                             <div class="md-form mb-5">
-                                <input type="text" id="email" class="form-control" placeholder="youremail@example.com">
+                                <input type="email" id="email" class="form-control" placeholder="youremail@example.com">
                                 <label for="email" class="">Your email (obligatory)</label>
                             </div>
 
@@ -137,7 +137,7 @@
                             <div class="row">
                                 <div class="col-md-3 mb-3">
                                     <label for="cc-expiration">End date.</label>
-                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                    <input type="date" class="form-control" id="cc-expiration" placeholder="" required>
                                     <div class="invalid-feedback">
                                         End date required
                                     </div>
@@ -151,7 +151,7 @@
                                 </div>
                             </div>
                             <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue the sale</button>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue the purchase</button>
 
                         </form>
 
@@ -177,7 +177,7 @@
                             <div>
                                 <h6 class="my-0">{{ $product->Name }}</h6>
                             </div>
-                            <span class="text-muted">R$ {{ $product->Price }},00</span>
+                            <span class="text-muted" id="productValue">R$ {{ $product->Price }},00</span>
                         </li>
                         @endforeach
                     </ul>

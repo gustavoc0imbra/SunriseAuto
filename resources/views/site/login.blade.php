@@ -29,7 +29,7 @@
 
                         <form action=""  style="width: 23rem;">
 
-                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Faça seu login</h3>
+                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login</h3>
 
                             <div class="form-outline mb-4">
                                 <input type="email" id="form2Example18" class="form-control form-control-lg" />
@@ -38,15 +38,15 @@
 
                             <div class="form-outline mb-4">
                                 <input type="password" id="form2Example28" class="form-control form-control-lg" />
-                                <label class="form-label" for="form2Example28">Senha</label>
+                                <label class="form-label" for="form2Example28">Password</label>
                             </div>
 
                             <div class="pt-1 mb-4">
                                 <button class="btn btn-primary btn-lg btn-block" type="button">Login</button>
                             </div>
 
-                            <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Esqueceu sua senha?</a></p>
-                            <p>Não tem uma conta? <a href="{{ route('site.register') }}" class="link-info">Registre-se aqui!</a></p>
+                            <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot the password?</a></p>
+                            <p>Doesn't have a account <a href="{{ route('site.register') }}" class="link-info">Sign up here!</a></p>
 
                         </form>
 

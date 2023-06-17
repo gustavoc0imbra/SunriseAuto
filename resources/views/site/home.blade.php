@@ -10,21 +10,21 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="{{ asset('lancer4.png') }}" class="d-block w-100" style="height: 750px;" alt="...">
+                        <img src="{{ asset('lancer4.png') }}" class="d-block w-100" style="height: 650px;" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h1 >Sunrise Auto</h1>
                             <h2>The store where you find everything for your car.</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('img2.png') }}" class="d-block w-100" style="height: 750px;" alt="...">
+                        <img src="{{ asset('img2.png') }}" class="d-block w-100" style="height: 650px;" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h1>Os melhores preços</h1>
-                            <h2>Preços imperdíveis a quase preço de fábrica.</h2>
+                            <h1>The Best Prices</h1>
+                            <h2>Unmissable prices.</h2>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="{{ asset('rx7.png') }}" class="d-block w-100" alt="..." style="height: 750px;">
+                        <img src="{{ asset('rx7.png') }}" class="d-block w-100" alt="..." style="height: 650px;">
                         <div class="carousel-caption d-none d-md-block">
                             <h1>Everything to your car.</h1>
                             <h2>Even accesories until performance upgrades (turbines, colectors).</h2>
@@ -54,14 +54,14 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Turbina Autoavionics A50</h5>
+                                    <h5 class="fw-bolder">Turbine Autoavionics A50</h5>
                                     <!-- Product price-->
                                     R$ 7450,00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao Carrinho</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Roda Nissan Nismo</h5>
+                                    <h5 class="fw-bolder">Nissan Nismo Wheel</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -91,7 +91,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao carrinho</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Capa massageadora de banco</h5>
+                                    <h5 class="fw-bolder">Seat massager cover</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">R$ 100,00</span>
                                     R$ 80,00
@@ -113,7 +113,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao carrinho</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Item mais buscado<br>Aerofólio P/ Pálio</h5>
+                                    <h5 class="fw-bolder">Most Wanted<br>Spoiler for Palio</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -140,7 +140,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao carrinho</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -154,7 +154,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Coletor Autoavionics</h5>
+                                    <h5 class="fw-bolder">Colector Autoavionics</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through">R$ 650,00</span>
                                     R$ 490,00
@@ -162,7 +162,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao carrinho</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -174,14 +174,14 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Kit Veilside P/ Rx7</h5>
+                                    <h5 class="fw-bolder">Kit Veilside for Rx7</h5>
                                     <!-- Product price-->
                                     R$ 100000,00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao carrinho</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Garrafa NOS</h5>
+                                    <h5 class="fw-bolder">NOS tank</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -211,7 +211,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Adicionar ao carrinho</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Roda Enkei</h5>
+                                    <h5 class="fw-bolder">Enkei Wheel</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
