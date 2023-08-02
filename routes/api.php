@@ -9,13 +9,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::middleware('auth', function (){
-Route::get('/profile')->name('api.profile');
-Route::get('/cart')->name('api.cart');
+Route::get('/index', [ProductController::class, 'index'])->name('api.index');
 
-Route::get('checkCep', [ApiController::class, 'verifyCEP'])->name('api.checkCep');
-// });
-
-Route::get('/index', [ApiController::class, 'index'])->name('api.index');
-
-Route::post('/create', [ApiController::class, 'createProductApi'])->name('api.createProd');
+Route::post('/storeProd', [ProductController::class, 'saveProduct'])->name('api.storeProd');

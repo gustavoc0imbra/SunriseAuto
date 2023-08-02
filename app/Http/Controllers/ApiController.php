@@ -10,7 +10,14 @@ use Illuminate\Support\Facades\Http;
 class ApiController extends Controller
 {
     public function index(Request $request){
-        return dd(Product::all());
+
+        if($request['query']){
+            $products = Product::find($request['query']);
+        }
+
+        $products = Product::all();
+
+         return $products;
     }
 
     public function verifyCEP(Request $request){
@@ -28,6 +35,6 @@ class ApiController extends Controller
         } catch (Exception $exc) {
             return $exc->getMessage();
         }
-        
+
     }
 }
