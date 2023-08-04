@@ -11,11 +11,14 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'name',
         'description',
         'image_url',
         'cost_price',
-        'selling_price'
+        'selling_price',
+        'created_at',
+        'updated_at'
     ];
 
     /*private function purchase(): HasMany{
