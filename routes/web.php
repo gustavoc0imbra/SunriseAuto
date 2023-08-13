@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\ApiController;
+/*use App\Http\Controllers\ApiController;*/
 use Illuminate\Support\Facades\Route;
 /*use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;*/
 
-Route::get('/', [ApiController::class,'index'])->name('site.home');
+/*Route::get('/', [ApiController::class,'index'])->name('site.home');*/
 
 /*Route::get('/login', [UserController::class,'loginForm'])->name('site.login');
 
