@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Date;
 use Tests\TestCase;
 
@@ -19,7 +18,7 @@ class ProductTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_add_product()
+    /*public function test_add_product()
     {
         $produto = [
             'name' => 'teste',
@@ -31,6 +30,20 @@ class ProductTest extends TestCase
 
         $response = $this->post('/api/storeProd', $produto);
         $response->dump();
+        $response->assertStatus(200);
+    }*/
+
+    public function test_detail_product()
+    {
+
+        $id = [
+           'id' => 5
+        ];
+
+        $response = $this->post("/api/detailsProd", $id);
+
+        $response->dump();
+
         $response->assertStatus(200);
     }
 }

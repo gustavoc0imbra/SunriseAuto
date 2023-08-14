@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProductsPostRequest;
+use App\Http\Requests\ProductsPutRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -12,54 +15,54 @@ class ProductController extends Controller
         return Product::all();
     }
 
-    public function saveProduct(Request $request): string
+    public function saveProduct(ProductsPostRequest $request): array
     {
         $resp = array();
         try {
 
-            $input = $request->validate([
-                'name' => 'string|required',
-                'description' => 'string|nullable',
-                'image' => 'file|nullable',
-                'cost_price' => 'numeric|required',
-                'selling_price' => 'numeric|nullable'
-            ]);
+            $input = $request->validated();
 
             $input['id'] = 0;
 
-            $request->hasFile('image') ? $input['image_url'] = $request->file('image')->store('./Uploads/Products') : null;
+            !$request->hasFile('image') ?: $input['image_url'] = $request->file('image')->store('/Uploads/Products');
 
             $resp['success'] = Product::create($input);
 
         }catch (\Exception $exc){
             $resp['success'] = false;
             $resp['message'] = "Um erro occoreu ao salvar o produto";
-            $resp['err'] = $exc->getMessage();
+            $resp['err']     = $exc->getMessage();
         }
 
         return json_encode($resp);
     }
 
-    public function edit(Request $request)
+    public function details(Request $request): Product
+    {
+        return Product::where('id',$request->id)->get()->first();
+    }
+
+    public function edit(ProductsPutRequest $request): array
     {
         $resp = array();
 
         try {
+            $input = $request->validated();
 
-            Product::find($request['id']);
+            $product = Product::find($request->id);
 
-            $input = $request->validate([
-               'name'          => 'string|required',
-               'description'   => 'string|nullable',
-               'imagem'        => 'file|nullable',
-               'cost_price'    => 'numeric|required',
-               'selling_price' => 'numeric|nullable'
-            ]);
+            if($request->hasFile('image')){
+                Storage::delete("$product->image_url");
+                $input['image_url'] = $request->file('image')->store('/Uploads/Products');
+            }
 
+            $product->fill($input);
+
+            $product->save() ? $resp['success'] = true : $resp['success'] = false;
         }catch (\Exception $exc){
             $resp['success'] = false;
-            $resp['message'] = "Um erro ocorreu ao editar o produto";
-            $resp['err'] = $exc->getMessage();
+            $resp['message'] = "Um erro occoreu ao editar o produto";
+            $resp['err']     = $exc->getMessage();
         }
 
         return json_encode($resp);
