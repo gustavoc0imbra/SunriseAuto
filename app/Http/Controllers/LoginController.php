@@ -14,7 +14,6 @@ class LoginController extends Controller
         $input = $request->validated();
 
         $input['password'] = Hash::make("$request->password");
-
         return User::create($input);
     }
 
@@ -28,6 +27,9 @@ class LoginController extends Controller
 
                 $user = User::where('email', "{$input['email']}")->first();
                 $token = $request->User()->createToken("api".$user->email)->plainTextToken;
+                $user->api_key = $token;
+                $user->save();
+
                 $resp = array(
                     'token' => $token
                 );

@@ -5,10 +5,10 @@ namespace App\Utils;
 
 class PaymentMethods {
     protected $availableMethods = [
-        'CC' => 'CREDIT CARD',
-        'DC' => 'DEBIT CARD',
-        'PX' => 'PIX',
-        'BL' => 'BILLET'
+        '01' => 'CREDIT CARD',
+        '02' => 'DEBIT CARD',
+        '03' => 'PIX',
+        '04' => 'BILLET'
     ];
 
     public function _contruct($method){
