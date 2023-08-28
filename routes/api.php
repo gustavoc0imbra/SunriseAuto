@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +19,5 @@ Route::put('/editProd', [ProductController::class, 'edit'])->name('api.edit');
 Route::get('/detailsProd/{id?}', [ProductController::class, 'details'])->name('api.prod_detail');
 
 /*---------------- Authentication sss ------------------*/
-Route::post('/register', [LoginController::class, 'register'])->name('api.registerUser');
+Route::post('/register', [UserController::class, 'register'])->name('api.registerUser');
 Route::post('/login', [LoginController::class, 'login'])->name('api.loginUser');

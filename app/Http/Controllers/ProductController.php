@@ -5,17 +5,25 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProductsPostRequest;
 use App\Http\Requests\ProductsPutRequest;
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        return Product::all();
+        $products = Product::all();
+
+        foreach ($products as $product) {
+            $product->image_url = asset('storage\\').$product->image_url;
+        }
+
+        return $products;
     }
 
-    public function saveProduct(ProductsPostRequest $request): array
+    public function saveProduct(ProductsPostRequest $request)
     {
         $resp = array();
         try {
@@ -24,7 +32,10 @@ class ProductController extends Controller
 
             $input['id'] = 0;
 
-            !$request->hasFile('image') ?: $input['image_url'] = $request->file('image')->store('/Uploads/Products');
+            $input['name'] = strtoupper($input['name']);
+            $input['description'] = strtoupper($input['description']);
+
+            !$request->hasFile('image') ?: $input['image_url'] = $request->file('image')->store('Uploads/Products');
 
             $resp['success'] = Product::create($input);
 
@@ -42,7 +53,7 @@ class ProductController extends Controller
         return Product::where('id',$request->id)->get()->first();
     }
 
-    public function edit(ProductsPutRequest $request): array
+    public function edit(ProductsPutRequest $request)
     {
         $resp = array();
 
@@ -53,7 +64,7 @@ class ProductController extends Controller
 
             if($request->hasFile('image')){
                 Storage::delete("$product->image_url");
-                $input['image_url'] = $request->file('image')->store('/Uploads/Products');
+                $input['image_url'] = $request->file('image')->store('public/Uploads/Products');
             }
 
             $product->fill($input);
