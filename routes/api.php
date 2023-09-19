@@ -11,12 +11,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/index', [ProductController::class, 'index'])->name('api.index');
+Route::get('/indexSlide', [ProductController::class, 'indexSlide'])->name('api.indexSlide');
 
 Route::post('/storeProd', [ProductController::class, 'saveProduct'])->name('api.storeProd');
-
 Route::put('/editProd', [ProductController::class, 'edit'])->name('api.edit');
-
-Route::get('/detailsProd/{id?}', [ProductController::class, 'details'])->name('api.prod_detail');
+Route::get('/detailsProd/{id}', [ProductController::class, 'productDetail'])->name('api.prod_detail');
 
 /*---------------- Authentication sss ------------------*/
 Route::post('/register', [UserController::class, 'register'])->name('api.registerUser');

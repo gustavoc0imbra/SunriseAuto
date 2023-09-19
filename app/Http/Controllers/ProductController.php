@@ -5,22 +5,44 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProductsPostRequest;
 use App\Http\Requests\ProductsPutRequest;
 use App\Models\Product;
-use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Date;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function indexSlide(): array
     {
-        $products = Product::all();
+        $products = DB::select("SELECT *
+                                        FROM products p
+                                       WHERE p.category_id = 1");
 
         foreach ($products as $product) {
             $product->image_url = asset('storage\\').$product->image_url;
         }
 
         return $products;
+    }
+
+    public function index(): Collection
+    {
+        $products = Product::all();
+        foreach ($products as $product) {
+            $product->image_url = asset('storage\\').$product->image_url;
+        }
+
+        return $products;
+    }
+
+    public function productDetail(Request $request)
+    {
+
+        $product = Product::where('id', $request->id)->get()->first();
+
+        $product->image_url = asset('storage\\').$product->image_url;
+
+        return $product;
     }
 
     public function saveProduct(ProductsPostRequest $request)
@@ -46,11 +68,6 @@ class ProductController extends Controller
         }
 
         return json_encode($resp);
-    }
-
-    public function details(Request $request): Product
-    {
-        return Product::where('id',$request->id)->get()->first();
     }
 
     public function edit(ProductsPutRequest $request)
