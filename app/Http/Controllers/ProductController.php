@@ -47,7 +47,7 @@ class ProductController extends Controller
 
     public function saveProduct(ProductsPostRequest $request)
     {
-        $resp = array();
+        $resp = [];
         try {
 
             $input = $request->validated();
@@ -72,7 +72,7 @@ class ProductController extends Controller
 
     public function edit(ProductsPutRequest $request)
     {
-        $resp = array();
+        $resp = [];
 
         try {
             $input = $request->validated();

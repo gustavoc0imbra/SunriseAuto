@@ -22,9 +22,9 @@ class LoginController extends Controller
                 $user->api_key = $token;
                 $user->save();
 
-                $resp = array(
+                $resp = [
                     '_token' => $token
-                );
+                ];
 
                 return json_encode($resp);
             }
